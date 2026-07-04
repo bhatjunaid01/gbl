@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Government of Jammu &amp; Kashmir Department of Geology &amp; Mining e-Challan Form A - Dispatch of Mineral and its Products">
+    <title>e-Challan - Department of Geology &amp; Mining, J&amp;K</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================================================================
+         MAIN CHALLAN PAGE â€” Fixed A4/Reference dimensions
+         ================================================================ -->
+    <div class="challan-page" id="challan-page">
+
+        <!-- ===== NOTE SECTION (Top Banner) ===== -->
+        <div class="note-section">
+            <!-- English Note -->
+            <p class="note-en">
+                <strong><u>Note:</u></strong> The Information mentioned in e-Challan, Such as (Validity and Vehicle No.) should be matched with the information mentioned in the
+                <a href="https://geologymining.jk.gov.in/" target="_blank">https://geologymining.jk.gov.in/</a> which can be seen after scanning the QR code encrypted on e-Challan.
+            </p>
+            <!-- Hindi Note -->
+            <p class="note-hi">
+                <strong>सूचना:</strong> ई-चालान में उल्लिखित जानकारी, जैसे (वैधता और वाहन संख्या आदि) का मिलान
+                <a href="https://geologymining.jk.gov.in/" target="_blank">https://geologymining.jk.gov.in/</a> में उल्लिखित जानकारी से किया जाना चाहिए, जिसे ई-चालान पर छपे क्यूआर कोड को स्कैन करने के बाद देखा जा सकता है।
+            </p>
+        </div>
+
+        <!-- ===== RED DIVIDER LINE ===== -->
+        <hr class="divider">
+
+        <!-- ===== HEADER SECTION ===== -->
+        <div class="header-section">
+            <!-- Government Emblem -->
+            <img src="assets/emblem.png" alt="Government Emblem" class="emblem" id="emblem">
+
+            <!-- Government & Department Titles -->
+            <h1 class="govt-title">Government of Jammu &amp; Kashmir</h1>
+            <h2 class="dept-title">Department of Geology &amp; Mining</h2>
+
+            <!-- Form Details -->
+            <p class="form-title">FORM 'A'</p>
+            <p class="form-rules">[See Rule 38(5), 50(12), 60(1)(v), 70, 71]</p>
+            <p class="form-desc">of challan for dispatch of mineral and its products</p>
+
+            <!-- E-Challan Label -->
+            <p class="echallan-title">E-CHALLAN</p>
+        </div>
+
+        <!-- ===== CHALLAN NUMBER ===== -->
+        <div class="challan-number-section">
+            <p class="challan-no-label">
+                Challan No. :
+                <span class="editable challan-no-value" contenteditable="true" data-field="challan-no">JK05CMV-5553932840</span>
+            </p>
+        </div>
+
+        <!-- ===== QR CODE PLACEHOLDER ===== -->
+        <div class="qr-section">
+            <div class="qr-placeholder" id="qr-placeholder">
+                <svg width="100%" height="100%" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="29" height="29" fill="white"/>
+                    <path d="M0 0h7v7H0V0zm1 1v5h5V1H1zm1 1h3v3H2V2zm5 0h2v1H7V2zm0 2h1v1H7V4zm0 2h2v1H7V6zm2-6h1v1H9V0zm1 1h1v2h-1V1zm1-1h2v1h-2V0zm0 2h1v1h-1V2zm1-1h1v1h-1V1zm1 1h1v1h-1V2zm-3 2h2v1h-2V4zm2 1h1v2h-1V5zm-2 1h1v1h-1V6zm3-6h7v7h-7V0zm1 1v5h5V1h-5zm1 1h3v3h-3V2zm6 0h1v1h-1V2zm0 2h2v1h-2V4zm1 1h1v2h-1V5zm-1 1h1v1h-1V6zm-15 9h7v7H0v-7zm1 1v5h5v-5H1zm1 1h3v3H2v-3zm6-2h1v1H8v-1zm1 1h2v1H9v-1zm0 2h1v1H9v-1zm1-2h1v1h-1v-1zm1 1h1v1h-1v-1zm0 2h1v1h-1v-1zm-3 2h2v1h-2v-1zm2 1h1v2h-1v-2zm-2 1h1v1h-1v-1zm10-5h1v1h-1v-1zm1 1h1v2h-1v-2zm-1 2h2v1h-2v-1zm3-3h2v1h-2v-1zm0 2h1v1h-1v-1zm1 1h1v1h-1v-1zm-3 2h2v1h-2v-1zm2 1h1v2h-1v-2zm-2 1h1v1h-1v-1zm3-6h1v1h-1v-1zm0 2h2v1h-2v-1zm1 1h1v2h-1v-2zm-1 2h1v1h-1v-1zm5-5h2v1h-2v-1zm0 2h1v1h-1v-1zm1 1h1v1h-1v-1zm-3 2h2v1h-2v-1zm2 1h1v2h-1v-2zm-2 1h1v1h-1v-1z" fill="#4A148C"/>
+                </svg>
+            </div>
+            <p class="qr-label">(QR-Code)</p>
+        </div>
+
+        <!-- ===== MINERAL INFORMATION ===== -->
+        <div class="mineral-section">
+            <p class="mineral-text">
+                Mineral :
+                <span class="editable mineral-value" contenteditable="true" data-field="mineral-name">Sand</span>
+                (<span class="editable mineral-qty" contenteditable="true" data-field="mineral-qty">2</span> MT)
+            </p>
+        </div>
+
+        <!-- ===== VALIDITY DATES ===== -->
+        <div class="validity-section">
+            <!-- English Validity -->
+            <p class="validity-en">
+                Validity from
+                <span class="editable" contenteditable="true" data-field="validity-from">02-07-2026 12:52 PM</span>
+                to
+                <span class="editable" contenteditable="true" data-field="validity-to">02-07-2026 17:52 PM</span>
+            </p>
+            <!-- Hindi Validity -->
+            <p class="validity-hi">
+                वैधता
+                <span class="editable" contenteditable="true" data-field="validity-from-hi">02-07-2026 12:52 PM</span>
+                से
+                <span class="editable" contenteditable="true" data-field="validity-to-hi">02-07-2026 17:52 PM</span>
+                तक
+            </p>
+        </div>
+
+        <!-- ===== URL SECTION ===== -->
+        <div class="url-section">
+            <p>
+                <strong>URL:</strong>
+                <a href="https://geologymining.jk.gov.in/" class="url-link" target="_blank" rel="noopener">https://geologymining.jk.gov.in/</a>
+            </p>
+        </div>
+
+        <!-- ===== DETAILS ROWS (1â€“15) ===== -->
+        <div class="details-section">
+
+            <!-- Row 1: Permit / License Info -->
+            <div class="detail-row">
+                <p>
+                    1. Type of mineral concessions Lease / License / Permit no.
+                    <span class="editable" contenteditable="true" data-field="permit-no">Com.vider</span>
+                </p>
+                <p class="sub-row">
+                    Issuing date
+                    <span class="editable" contenteditable="true" data-field="issue-date">02-07-2026</span>
+                    Valid upto
+                    <span class="editable" contenteditable="true" data-field="valid-upto">02-07-2026</span>
+                </p>
+            </div>
+
+            <!-- Row 2: Concessionary Name -->
+            <div class="detail-row">
+                <p>
+                    2. Name &amp; Style of Concessionary
+                    <span class="editable no-placeholder" contenteditable="true" data-field="concessionary-name"></span>
+                </p>
+            </div>
+
+            <!-- Row 3: Concession Area -->
+            <div class="detail-row">
+                <p>
+                    3. Location of mineral concession area
+                    <span class="editable no-placeholder" contenteditable="true" data-field="concession-area"></span>
+                </p>
+            </div>
+
+            <!-- Row 4: Mineral Type Granted -->
+            <div class="detail-row">
+                <p>
+                    4. Type of mineral Granted on mineral concessions
+                    <span class="editable no-placeholder" contenteditable="true" data-field="mineral-type-granted"></span>
+                </p>
+            </div>
+
+            <!-- Row 5: Quantity Granted -->
+            <div class="detail-row">
+                <p>
+                    5. Quantity of mineral granted on mineral Concessions
+                    <span class="editable no-placeholder" contenteditable="true" data-field="quantity-granted"></span>
+                </p>
+            </div>
+
+            <!-- Row 6: Stone Crusher Details -->
+            <div class="detail-row">
+                <p>
+                    6. Name &amp; Location of Stone crusher Unit and Holder
+                    <span class="editable" contenteditable="true" data-field="crusher-name">Mudasir Rajab Chakloo Baramulla</span>
+                </p>
+            </div>
+
+            <!-- Row 7: Finished Products Type -->
+            <div class="detail-row">
+                <p>
+                    7. Type of Finished Products : Sand/Bajri/Kankra (Aggregate)/Dust etc.
+                    <span class="editable" contenteditable="true" data-field="finished-product">Sand</span>
+                </p>
+            </div>
+
+            <!-- Row 8: Quantity Dispatched -->
+            <div class="detail-row">
+                <p>
+                    8. Quantity of mineral dispatched
+                    <span class="editable" contenteditable="true" data-field="quantity-dispatched">2</span>
+                    (in MT)
+                </p>
+            </div>
+
+            <!-- Row 9: Dispatch Date & Time -->
+            <div class="detail-row">
+                <p>
+                    9. Date &amp; Time of dispatch
+                    <span class="editable" contenteditable="true" data-field="dispatch-datetime">02-07-2026 12:52 PM</span>
+                    (Valid upto 5 Hours)
+                </p>
+            </div>
+
+            <!-- Row 10: Transportation Route -->
+            <div class="detail-row">
+                <p>
+                    10. Route of the Transportation- Source
+                    <span class="editable" contenteditable="true" data-field="source">Chakloo Baramulla, Baramulla</span>
+                    Destination
+                    <span class="editable" contenteditable="true" data-field="destination">Lolab kupware</span>
+                </p>
+            </div>
+
+            <!-- Row 11: Rate & Amount -->
+            <div class="detail-row">
+                <p>
+                    11. Rate of Mineral
+                    <span class="editable" contenteditable="true" data-field="rate">Rs.595</span>
+                    Total Amount (Excluding GST and Transportation charges)
+                    <span class="editable" contenteditable="true" data-field="total-amount">Rs.1190</span>
+                </p>
+            </div>
+
+            <!-- Row 12: GST Details -->
+            <div class="detail-row">
+                <p>
+                    12. GST Bill/No.
+                    <span class="editable" contenteditable="true" data-field="gst-bill">NA</span>
+                    Quantity
+                    <span class="editable" contenteditable="true" data-field="gst-quantity">5%</span>
+                    Amount
+                    <span class="editable" contenteditable="true" data-field="gst-amount">Rs.59.5</span>
+                    (Enclose copy of GST Invoice)
+                </p>
+            </div>
+
+            <!-- Row 13: Vehicle Number -->
+            <div class="detail-row">
+                <p>
+                    13. Vehicle No.
+                    <span class="editable" contenteditable="true" data-field="vehicle-no">JK09B8305</span>
+                </p>
+            </div>
+
+            <!-- Row 14: Buyer Information -->
+            <div class="detail-row">
+                <p>
+                    14. Name &amp; Address of Consignee / Buyer / Purchaser
+                    <span class="editable" contenteditable="true" data-field="buyer-info">Mudasir Ahmad Sofi, Chakloo Baramulla, Baramulla</span>
+                </p>
+            </div>
+
+            <!-- Row 15: Driver Information -->
+            <div class="detail-row">
+                <p>
+                    15. Name &amp; Phone No. of Driver
+                    <span class="editable" contenteditable="true" data-field="driver-info">Gowhar, 9858725902</span>
+                </p>
+            </div>
+
+        </div>
+        <!-- END details-section -->
+
+        <!-- ===== APPROVAL SECTION ===== -->
+        <div class="approval-section">
+            <p class="approval-text">Self Approved by Mineral Concessionary</p>
+            <!-- Approved Seal Image -->
+            <img src="assets/approved.png" alt="Approved Seal" class="approved-seal" id="approved-seal">
+        </div>
+
+    </div>
+    <!-- END challan-page -->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+

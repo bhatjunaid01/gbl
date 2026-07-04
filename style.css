@@ -1,0 +1,431 @@
+﻿* ,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #cfcfcf;
+}
+
+body {
+    width: 794px;
+    min-height: 1123px;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    background-color: #ffffff;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.25;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.challan-page {
+    position: absolute;
+    top: 0;
+    left: 128px;
+    width: 538px;
+    min-height: 1019px;
+    overflow: visible;
+    background-color: #ff9700;
+}
+
+.note-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 73px;
+    padding: 12px 10px 0 10px;
+    background-color: transparent;
+    font-size: 8.4px;
+    font-weight: 700;
+    line-height: 10.6px;
+}
+
+.note-en {
+    margin-bottom: 8px;
+}
+
+.note-hi {
+    margin-bottom: 0;
+}
+
+.note-en a,
+.note-hi a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.divider {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    border: none;
+    border-top: 2px solid #7e6336;
+}
+
+.header-section {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background-color: transparent;
+}
+
+.emblem {
+    position: absolute;
+    top: 29px;
+    left: 245px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.govt-title {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.dept-title {
+    position: absolute;
+    top: 102px;
+    left: 0;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.form-title {
+    position: absolute;
+    top: 122px;
+    left: 0;
+    width: 100%;
+    font-size: 9.6px;
+    font-weight: 800;
+    line-height: 12px;
+    text-align: center;
+}
+
+.form-rules {
+    position: absolute;
+    top: 135px;
+    left: 0;
+    width: 100%;
+    font-size: 9.6px;
+    font-weight: normal;
+    line-height: 11px;
+    text-align: center;
+}
+
+.form-desc {
+    position: absolute;
+    top: 148px;
+    left: 0;
+    width: 100%;
+    font-size: 9.6px;
+    font-weight: normal;
+    line-height: 11px;
+    text-align: center;
+}
+
+.echallan-title {
+    position: absolute;
+    top: 164px;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 13px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.challan-number-section {
+    position: absolute;
+    top: 228px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    text-align: center;
+}
+
+.challan-no-label {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.challan-no-value {
+    color: #ffe93a !important;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: left;
+}
+
+.qr-section {
+    position: absolute;
+    top: 252px;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    text-align: center;
+}
+
+.qr-placeholder {
+    position: absolute;
+    top: 0;
+    left: 246px;
+    width: 47px;
+    height: 47px;
+    padding: 2px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.qr-label {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.mineral-section {
+    position: absolute;
+    top: 326px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    text-align: center;
+}
+
+.mineral-text {
+    color: #ffe93a;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.mineral-value,
+.mineral-qty {
+    color: #ffe93a;
+    font-weight: 800;
+}
+
+.validity-section {
+    position: absolute;
+    top: 348px;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: center;
+}
+
+.validity-en {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.validity-hi {
+    position: absolute;
+    top: 23px;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.url-section {
+    position: absolute;
+    top: 391px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.url-link {
+    color: #ffe93a !important;
+    text-decoration: underline !important;
+}
+
+.details-section {
+    position: relative;
+    width: 520px;
+    min-height: 476px;
+    margin: 407px 0 0 9px;
+    overflow: visible;
+    background-color: #ff9700;
+    border: 2px solid #8f5709;
+}
+
+.detail-row {
+    display: block;
+    width: 100%;
+    min-height: 33px;
+    padding: 9px 8px 7px 8px;
+    overflow: visible;
+    color: #000;
+    border-bottom: 2px solid #8f5709;
+    font-size: 9px;
+    line-height: 13px;
+}
+
+.detail-row:first-child {
+    min-height: 56px;
+    padding-top: 10px;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row:nth-child(odd) {
+    background-color: #d07d03;
+}
+
+.detail-row:nth-child(even) {
+    background-color: #dc8504;
+}
+
+.detail-row p {
+    display: block;
+    width: auto;
+    overflow: visible;
+    white-space: normal;
+}
+
+.sub-row {
+    margin-top: 2px;
+    padding-left: 12px;
+}
+
+.approval-section {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 520px;
+    height: 140px;
+    margin: 30px 0 0 9px;
+    padding: 8px 10px 6px 10px;
+    background-color: transparent;
+    border: 2px solid #8f5709;
+}
+
+.approval-section::after {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #8f5709;
+}
+
+.approval-text {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 16px;
+    text-align: center;
+}
+
+.approved-seal {
+    position: absolute;
+    top: 48px;
+    left: 204px;
+    width: 112px;
+    height: auto;
+    display: block;
+}
+
+.editable {
+    display: inline;
+    min-width: 0;
+    min-height: 0;
+    margin: 0 1px;
+    padding: 0;
+    overflow: visible;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+    font: inherit;
+    font-weight: 800;
+    line-height: inherit;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    cursor: text;
+}
+
+.editable:empty {
+    display: inline-block;
+    min-width: 1ch;
+    min-height: 1em;
+}
+
+.editable:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+.details-section .editable {
+    text-decoration: underline;
+}
+
+.details-section .editable.no-placeholder {
+    text-decoration: none;
+    border-bottom: none;
+    color: #000;
+    font-weight: 800;
+}
+
+.details-section .editable.no-placeholder:empty::before {
+    content: "............................";
+}
+
+
+
+
