@@ -801,4 +801,43 @@ body.verification-page .challan-page {
         padding-left: 8px;
         padding-right: 8px;
     }
+
+    /* --- slightly larger note text --- */
+    body.verification-page .note-section {
+        font-size: clamp(9px, 2.6vw, 12px);
+        line-height: clamp(12px, 3.4vw, 16px);
+        padding: 10px 4px 8px 4px;
+    }
+
+    /* --- more space divider → logo --- */
+    body.verification-page .divider {
+        margin-bottom: 4px;
+    }
+
+    /* --- more space logo → heading --- */
+    body.verification-page .emblem {
+        margin-bottom: 10px;
+    }
+
+    /* --- more space challan-no → QR --- */
+    body.verification-page .challan-number-section {
+        padding: 6px 0;
+        margin-bottom: 8px;
+    }
+
+    /* --- more whitespace around QR block --- */
+    body.verification-page .qr-section {
+        padding: 6px 0 8px 0;
+    }
+
+    body.verification-page .qr-label {
+        margin-top: 4px;
+    }
+
+    /* --- larger table text & taller rows --- */
+    body.verification-page .detail-row {
+        padding: 10px 8px 8px 8px;
+        font-size: clamp(10px, 2.8vw, 13px);
+        line-height: clamp(15px, 4vw, 19px);
+    }
 }
