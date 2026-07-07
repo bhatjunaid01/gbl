@@ -779,16 +779,26 @@ body.verification-page .challan-page {
 }
 
 /* ============================================================
-   MOBILE (≤768px) – near full-width orange card, tiny margins
+   MOBILE (≤768px) – edge-to-edge orange page, tiny gutters
+   The entire page background is orange so the challan is not
+   a "card" – it fills the screen naturally.
    ============================================================ */
 @media (max-width: 768px) {
+    html.verification-mode {
+        background-color: #ff9700;
+        overflow-x: hidden;
+    }
+
     body.verification-page {
-        padding: 0 8px;
+        background-color: #ff9700;
+        padding: 0;
     }
 
     body.verification-page .challan-page {
         width: 100%;
         max-width: none;
-        margin: 12px 0;
+        margin: 0;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
