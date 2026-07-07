@@ -782,6 +782,8 @@ body.verification-page .challan-page {
    MOBILE (≤768px) – edge-to-edge orange page, tiny gutters
    The entire page background is orange so the challan is not
    a "card" – it fills the screen naturally.
+   All spacing uses a consistent clamp scale so every section
+   grows proportionally: xs (1vw), sm (2vw), md (3vw), lg (4vw).
    ============================================================ */
 @media (max-width: 768px) {
     html.verification-mode {
@@ -800,44 +802,133 @@ body.verification-page .challan-page {
         margin: 0;
         padding-left: 8px;
         padding-right: 8px;
+        padding-bottom: clamp(16px, 4vw, 28px);
     }
 
-    /* --- slightly larger note text --- */
+    /* ---- TOP NOTE ---- */
     body.verification-page .note-section {
-        font-size: clamp(9px, 2.6vw, 12px);
-        line-height: clamp(12px, 3.4vw, 16px);
-        padding: 10px 4px 8px 4px;
+        padding: clamp(12px, 3vw, 20px) 4px clamp(10px, 2.5vw, 16px) 4px;
+        font-size: clamp(10px, 3vw, 14px);
+        line-height: clamp(16px, 4.4vw, 22px);
+    }
+    body.verification-page .note-en {
+        margin-bottom: clamp(8px, 2vw, 14px);
     }
 
-    /* --- more space divider → logo --- */
+    /* ---- DIVIDER ---- */
     body.verification-page .divider {
-        margin-bottom: 4px;
+        margin-bottom: clamp(8px, 2.5vw, 16px);
     }
 
-    /* --- more space logo → heading --- */
+    /* ---- HEADER ---- */
+    body.verification-page .header-section {
+        padding: clamp(16px, 4vw, 28px) 0 clamp(12px, 3vw, 20px) 0;
+    }
     body.verification-page .emblem {
-        margin-bottom: 10px;
+        width: clamp(42px, 11vw, 58px);
+        height: clamp(42px, 11vw, 58px);
+        margin-bottom: clamp(12px, 3vw, 20px);
+    }
+    body.verification-page .govt-title {
+        font-size: clamp(16px, 4.5vw, 22px);
+        line-height: clamp(20px, 5.5vw, 28px);
+        margin-bottom: clamp(2px, 0.5vw, 4px);
+    }
+    body.verification-page .dept-title {
+        font-size: clamp(16px, 4.5vw, 22px);
+        line-height: clamp(20px, 5.5vw, 28px);
+        margin-bottom: clamp(6px, 1.5vw, 10px);
+    }
+    body.verification-page .form-title {
+        font-size: clamp(11px, 3.2vw, 15px);
+        line-height: clamp(14px, 4vw, 20px);
+        margin-bottom: clamp(3px, 0.8vw, 6px);
+    }
+    body.verification-page .form-rules {
+        font-size: clamp(11px, 3.2vw, 15px);
+        line-height: clamp(14px, 4vw, 20px);
+        margin-bottom: clamp(3px, 0.8vw, 6px);
+    }
+    body.verification-page .form-desc {
+        font-size: clamp(11px, 3.2vw, 15px);
+        line-height: clamp(14px, 4vw, 20px);
+        margin-bottom: clamp(6px, 1.5vw, 10px);
+    }
+    body.verification-page .echallan-title {
+        font-size: clamp(14px, 4vw, 20px);
+        line-height: clamp(18px, 5vw, 24px);
+        margin-bottom: clamp(10px, 2.5vw, 16px);
     }
 
-    /* --- more space challan-no → QR --- */
+    /* ---- CHALLAN NUMBER ---- */
     body.verification-page .challan-number-section {
-        padding: 6px 0;
-        margin-bottom: 8px;
+        padding: clamp(8px, 2vw, 14px) 0;
+        margin-bottom: clamp(12px, 3vw, 20px);
+    }
+    body.verification-page .challan-no-label,
+    body.verification-page .challan-no-value {
+        font-size: clamp(16px, 4.5vw, 22px);
     }
 
-    /* --- more whitespace around QR block --- */
+    /* ---- QR SECTION ---- */
     body.verification-page .qr-section {
-        padding: 6px 0 8px 0;
+        padding: clamp(10px, 2.5vw, 16px) 0 clamp(14px, 3.5vw, 22px) 0;
     }
-
+    body.verification-page .qr-placeholder {
+        width: clamp(56px, 16vw, 80px);
+        height: clamp(56px, 16vw, 80px);
+    }
     body.verification-page .qr-label {
-        margin-top: 4px;
+        font-size: clamp(14px, 4vw, 19px);
+        margin-top: clamp(6px, 1.5vw, 10px);
     }
 
-    /* --- larger table text & taller rows --- */
-    body.verification-page .detail-row {
-        padding: 10px 8px 8px 8px;
+    /* ---- MINERAL ---- */
+    body.verification-page .mineral-section {
+        padding: clamp(10px, 2.5vw, 18px) 0;
+    }
+    body.verification-page .mineral-text {
+        font-size: clamp(14px, 4vw, 19px);
+    }
+
+    /* ---- VALIDITY ---- */
+    body.verification-page .validity-section {
+        padding: clamp(10px, 2.5vw, 16px) 0;
+        font-size: clamp(14px, 4vw, 19px);
+        line-height: clamp(18px, 5vw, 26px);
+    }
+    body.verification-page .validity-en {
+        font-size: clamp(14px, 4vw, 19px);
+        margin-bottom: clamp(4px, 1vw, 8px);
+    }
+    body.verification-page .validity-hi {
+        font-size: clamp(14px, 4vw, 19px);
+    }
+
+    /* ---- URL ---- */
+    body.verification-page .url-section {
+        padding: clamp(8px, 2vw, 14px) 0 clamp(16px, 4vw, 26px) 0;
         font-size: clamp(10px, 2.8vw, 13px);
-        line-height: clamp(15px, 4vw, 19px);
+    }
+
+    /* ---- TABLE ---- */
+    body.verification-page .detail-row {
+        padding: clamp(12px, 3vw, 18px) 8px clamp(10px, 2.5vw, 14px) 8px;
+        font-size: clamp(11px, 3vw, 14px);
+        line-height: clamp(17px, 4.5vw, 22px);
+    }
+
+    /* ---- APPROVAL ---- */
+    body.verification-page .approval-section {
+        margin-top: clamp(8px, 2vw, 14px);
+        min-height: clamp(130px, 35vw, 180px);
+        padding: clamp(12px, 3vw, 18px) 10px clamp(20px, 5vw, 30px) 10px;
+    }
+    body.verification-page .approval-text {
+        font-size: clamp(11px, 3vw, 14px);
+        line-height: clamp(16px, 4.4vw, 22px);
+    }
+    body.verification-page .approved-seal {
+        width: clamp(90px, 24vw, 130px);
     }
 }
