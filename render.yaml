@@ -1,0 +1,28 @@
+# Render Blueprint – e-Challan application
+# https://render.com/docs/blueprint-spec
+#
+# This configures a Web Service with a Persistent Disk so that the
+# SQLite database survives restarts and redeployments.
+#
+# To use: connect this repo to Render and it will auto-detect this file.
+# Or manually create a Web Service and attach a Persistent Disk mounted
+# at /var/data, then set DATABASE_PATH=/var/data/challans.db in the
+# Environment settings.
+
+services:
+  - type: web
+    name: gbl-echallan
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /var/data/challans.db
+      - key: QR_BASE_URL
+        sync: false  # Set this in Render dashboard to your public URL
+    disk:
+      name: echallan-data
+      mountPath: /var/data
+      sizeGB: 1

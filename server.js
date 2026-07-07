@@ -38,6 +38,10 @@ function renderTemplateWithData(data) {
   if (!html.includes('<base href="/">')) {
     html = html.replace('<head>', '<head>\n    <base href="/">');
   }
+  if (data.readOnly) {
+    html = html.replace('<html lang="en">', '<html lang="en" class="verification-mode">');
+    html = html.replace('<body>', '<body class="verification-page">');
+  }
   const payload = JSON.stringify(data).replace(/</g, '\\u003c');
   return html.replace('</body>', `    <script>window.__CHALLAN_DATA__ = ${payload};</script>\n</body>`);
 }

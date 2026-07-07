@@ -1,4 +1,4 @@
-﻿* ,
+* ,
 *::before,
 *::after {
     margin: 0;
@@ -406,6 +406,11 @@ a {
     min-height: 1em;
 }
 
+.editable:not(.no-placeholder):empty::before {
+    content: "__________";
+    pointer-events: none;
+}
+
 .editable:focus {
     outline: none;
     background-color: transparent;
@@ -426,6 +431,364 @@ a {
     content: "............................";
 }
 
+/* ============================================================
+   VERIFICATION PAGE – mobile-first, normal document flow
+   
+   Every section switches from position:absolute to static/relative
+   so content stacks naturally top-to-bottom. No fixed widths,
+   no transform:scale, no overflow-x, no abs-positioning for layout.
+   ============================================================ */
 
+html.verification-mode {
+    width: 100%;
+    min-width: 0;
+    background-color: #cfcfcf;
+}
 
+body.verification-page {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #cfcfcf;
+    box-shadow: none;
+}
 
+/* --- challan-page container ---
+   Full-width orange block, small side padding for content breathing room.
+   No absolute positioning – everything flows. */
+body.verification-page .challan-page {
+    position: static;
+    top: auto;
+    left: auto;
+    width: calc(100% - 16px);
+    max-width: 1160px;
+    min-height: auto;
+    margin: 30px auto;
+    padding: 0 10px;
+    overflow: visible;
+    background-color: #ff9700;
+}
+
+/* --- note-section (top banner) ---
+   Normal flow, auto height. */
+body.verification-page .note-section {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 10px 4px 8px 4px;
+    background-color: transparent;
+    font-size: clamp(8px, 2.4vw, 11px);
+    font-weight: 700;
+    line-height: clamp(10px, 3vw, 14px);
+}
+
+body.verification-page .note-en {
+    margin-bottom: 6px;
+}
+
+/* --- divider --- */
+body.verification-page .divider {
+    position: static;
+    top: auto;
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    border: none;
+    border-top: 2px solid #7e6336;
+}
+
+/* --- header-section ---
+   Normal flow, flex column, centered. */
+body.verification-page .header-section {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0 6px 0;
+}
+
+body.verification-page .emblem {
+    position: static;
+    top: auto;
+    left: auto;
+    width: clamp(36px, 10vw, 52px);
+    height: clamp(36px, 10vw, 52px);
+    margin: 0 auto 6px auto;
+    display: block;
+}
+
+body.verification-page .govt-title {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(13px, 3.8vw, 18px);
+    line-height: clamp(16px, 4.4vw, 22px);
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+body.verification-page .dept-title {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(13px, 3.8vw, 18px);
+    line-height: clamp(16px, 4.4vw, 22px);
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+body.verification-page .form-title {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(8px, 2.4vw, 11px);
+    line-height: clamp(10px, 3vw, 14px);
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+body.verification-page .form-rules {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(8px, 2.4vw, 11px);
+    line-height: clamp(10px, 3vw, 14px);
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+body.verification-page .form-desc {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(8px, 2.4vw, 11px);
+    line-height: clamp(10px, 3vw, 14px);
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+body.verification-page .echallan-title {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(10px, 3vw, 14px);
+    line-height: clamp(12px, 3.4vw, 16px);
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+/* --- challan number ---
+   Normal flow, centered. */
+body.verification-page .challan-number-section {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 4px 0;
+    margin-bottom: 4px;
+}
+
+body.verification-page .challan-no-label,
+body.verification-page .challan-no-value {
+    font-size: clamp(13px, 3.8vw, 18px);
+}
+
+/* --- QR section ---
+   Normal flow, centered. QR placeholder is static & centered. */
+body.verification-page .qr-section {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 2px 0 4px 0;
+}
+
+body.verification-page .qr-placeholder {
+    position: static;
+    top: auto;
+    left: auto;
+    width: clamp(48px, 14vw, 72px);
+    height: clamp(48px, 14vw, 72px);
+    padding: 3px;
+    margin: 0 auto;
+    display: block;
+}
+
+body.verification-page .qr-placeholder img,
+body.verification-page .qr-placeholder svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+body.verification-page .qr-label {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(13px, 3.8vw, 18px);
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* --- mineral section --- */
+body.verification-page .mineral-section {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 6px 0;
+}
+
+body.verification-page .mineral-text {
+    font-size: clamp(12px, 3.4vw, 16px);
+}
+
+/* --- validity section ---
+   Normal flow. Children also switch to static. */
+body.verification-page .validity-section {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 4px 0;
+    font-size: clamp(12px, 3.4vw, 17px);
+    line-height: clamp(16px, 4.6vw, 22px);
+}
+
+body.verification-page .validity-en {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(12px, 3.4vw, 17px);
+    margin-bottom: 2px;
+}
+
+body.verification-page .validity-hi {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(12px, 3.4vw, 17px);
+}
+
+/* --- URL section --- */
+body.verification-page .url-section {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 4px 0 10px 0;
+    font-size: clamp(8px, 2.4vw, 12px);
+}
+
+/* --- details table ---
+   Normal flow, full width, no margin-top hack. */
+body.verification-page .details-section {
+    position: static;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    overflow: visible;
+    border: 2px solid #8f5709;
+}
+
+body.verification-page .detail-row {
+    min-height: 0;
+    padding: 8px 8px 6px 8px;
+    font-size: clamp(9px, 2.6vw, 12px);
+    line-height: clamp(13px, 3.6vw, 17px);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+body.verification-page .detail-row:first-child {
+    min-height: 0;
+    padding-top: 8px;
+}
+
+body.verification-page .sub-row {
+    margin-top: 2px;
+    padding-left: 10px;
+}
+
+/* --- approval section --- */
+body.verification-page .approval-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    margin: 0;
+    padding: 8px 10px 16px 10px;
+    border: 2px solid #8f5709;
+    border-top: none;
+}
+
+body.verification-page .approval-section::after {
+    display: none;
+}
+
+body.verification-page .approval-text {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    font-size: clamp(9px, 2.6vw, 12px);
+    line-height: clamp(14px, 3.8vw, 18px);
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #8f5709;
+    margin-bottom: 10px;
+}
+
+body.verification-page .approved-seal {
+    position: static;
+    top: auto;
+    left: auto;
+    width: clamp(80px, 22vw, 120px);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- Bottom spacing so it doesn't feel cramped --- */
+body.verification-page .challan-page {
+    padding-bottom: 10px;
+}
+
+/* ============================================================
+   MOBILE (≤768px) – near full-width orange card, tiny margins
+   ============================================================ */
+@media (max-width: 768px) {
+    body.verification-page {
+        padding: 0 8px;
+    }
+
+    body.verification-page .challan-page {
+        width: 100%;
+        max-width: none;
+        margin: 12px 0;
+    }
+}

@@ -1,7 +1,10 @@
-﻿const path = require('path');
+const fs = require('fs');
+const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 
-const DB_PATH = path.join(__dirname, 'database', 'challans.db');
+const DB_PATH = process.env.DATABASE_PATH
+  ? path.resolve(process.env.DATABASE_PATH)
+  : path.join(__dirname, 'database', 'challans.db');
 
 const FIELD_COLUMNS = [
   'challan_no',
@@ -98,6 +101,11 @@ function close(db) {
 }
 
 async function init() {
+  const dbDir = path.dirname(DB_PATH);
+  if (!fs.existsSync(dbDir)) {
+    fs.mkdirSync(dbDir, { recursive: true });
+  }
+  console.log(`Database path: ${DB_PATH}`);
   const db = getDb();
   try {
     const fieldSql = FIELD_COLUMNS.map((column) => `${column} TEXT`).join(',\n      ');

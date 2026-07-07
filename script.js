@@ -1,4 +1,4 @@
-﻿/**
+/**
  * e-Challan frontend/backend connector.
  * Connects the editable challan webpage to the backend and QR endpoints.
  */
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         field.addEventListener('blur', function () {
             this.classList.remove('editing');
             if (this.textContent.trim() === '') {
-                this.textContent = '';
+                this.innerHTML = '';
             }
         });
 

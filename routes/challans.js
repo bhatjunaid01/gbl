@@ -1,4 +1,4 @@
-﻿const express = require('express');
+const express = require('express');
 const QRCode = require('qrcode');
 const {
   FIELD_COLUMNS,
@@ -104,7 +104,11 @@ router.post('/challans', async (req, res, next) => {
       return res.status(400).json({ error: 'Missing fields', fields: missing });
     }
 
-    const challanNumber = await generateUniqueChallanNumber(db);
+    // Use the user-provided challan number if non-empty; otherwise generate a random one
+    const userChallanNo = fields.challan_no;
+    const challanNumber = (userChallanNo && userChallanNo.trim() !== '')
+      ? userChallanNo.trim()
+      : await generateUniqueChallanNumber(db);
     const qrUrl = `${qrBaseUrl(req.body.browserOrigin)}/challan/${encodeURIComponent(challanNumber)}`;
     fields.challan_no = challanNumber;
 
@@ -176,8 +180,3 @@ router.get('/challans/:challanNumber/qr', async (req, res, next) => {
 
 
 module.exports = router;
-
-
-
-
-
