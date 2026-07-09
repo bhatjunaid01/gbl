@@ -59,8 +59,8 @@ a {
 }
 
 .note-en strong {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900 !important;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: 900;
 }
 
 .note-hi {
@@ -71,8 +71,8 @@ a {
 }
 
 .note-hi strong {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900 !important;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: 900;
 }
 
 .note-en a,
@@ -527,8 +527,8 @@ body.verification-page .note-en {
 }
 
 body.verification-page .note-en strong {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900 !important;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: 900;
 }
 
 body.verification-page .note-hi {
@@ -538,8 +538,8 @@ body.verification-page .note-hi {
 }
 
 body.verification-page .note-hi strong {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900 !important;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: 900;
 }
 
 /* --- divider --- */
@@ -927,8 +927,8 @@ body.verification-page .challan-page {
         line-height: 1.8;
     }
     body.verification-page .note-en strong {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 900 !important;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-weight: 900;
     }
     body.verification-page .note-hi {
         font-weight: 400;
@@ -936,8 +936,8 @@ body.verification-page .challan-page {
         line-height: 1.8;
     }
     body.verification-page .note-hi strong {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 900 !important;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-weight: 900;
     }
 
     /* ---- DIVIDER ---- */
