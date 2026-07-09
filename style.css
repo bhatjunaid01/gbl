@@ -560,7 +560,7 @@ body.verification-page .govt-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(16px, 4.5vw, 20px);
+    font-size: clamp(18px, 5vw, 22px);
     font-weight: 700;
     line-height: clamp(19px, 5.2vw, 24px);
     text-align: center;
@@ -572,7 +572,7 @@ body.verification-page .dept-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(16px, 4.5vw, 20px);
+    font-size: clamp(18px, 5vw, 22px);
     font-weight: 700;
     line-height: clamp(19px, 5.2vw, 24px);
     text-align: center;
@@ -664,7 +664,7 @@ body.verification-page .qr-section {
     height: auto;
     text-align: center;
     padding: 2px 0;
-    margin-bottom: 28px;
+    margin-bottom: 14px;
 }
 
 body.verification-page .qr-placeholder {
@@ -927,13 +927,13 @@ body.verification-page .challan-page {
         margin-bottom: clamp(8px, 2.5vw, 14px);
     }
     body.verification-page .govt-title {
-        font-size: clamp(16px, 4.5vw, 20px);
+        font-size: clamp(18px, 5vw, 22px);
         font-weight: 700;
         line-height: clamp(19px, 5.2vw, 24px);
         margin-bottom: clamp(1px, 0.5vw, 2px);
     }
     body.verification-page .dept-title {
-        font-size: clamp(16px, 4.5vw, 20px);
+        font-size: clamp(18px, 5vw, 22px);
         font-weight: 700;
         line-height: clamp(19px, 5.2vw, 24px);
         margin-bottom: clamp(10px, 3vw, 14px);
@@ -984,7 +984,7 @@ body.verification-page .challan-page {
     /* ---- QR SECTION ---- */
     body.verification-page .qr-section {
         padding: clamp(2px, 1vw, 4px) 0;
-        margin-bottom: clamp(24px, 5vw, 28px);
+        margin-bottom: clamp(10px, 3vw, 14px);
     }
     body.verification-page .qr-placeholder {
         width: clamp(100px, 25vw, 140px);
