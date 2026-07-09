@@ -44,20 +44,35 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 73px;
-    padding: 12px 10px 0 10px;
+    height: 78px;
+    padding: 8px 10px 4px 10px;
     background-color: transparent;
-    font-size: 8.4px;
-    font-weight: 700;
-    line-height: 10.6px;
+    font-size: 9px;
+    line-height: 15px;
 }
 
 .note-en {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.note-en strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900 !important;
 }
 
 .note-hi {
     margin-bottom: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.note-hi strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900 !important;
 }
 
 .note-en a,
@@ -68,13 +83,13 @@ a {
 
 .divider {
     position: absolute;
-    top: 73px;
-    left: 0;
-    width: 100%;
-    height: 2px;
+    top: 78px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 1px;
     margin: 0;
     border: none;
-    border-top: 2px solid #7e6336;
+    background-color: #999;
 }
 
 .header-section {
@@ -169,10 +184,10 @@ a {
 
 .challan-number-section {
     position: absolute;
-    top: 228px;
+    top: 230px;
     left: 0;
     width: 100%;
-    height: 24px;
+    height: 28px;
     text-align: center;
 }
 
@@ -186,31 +201,30 @@ a {
     font-size: 16px;
     font-weight: 800;
     text-align: left;
+    margin-left: 8px;
 }
 
 .qr-section {
     position: absolute;
-    top: 252px;
+    top: 278px;
     left: 0;
     width: 100%;
-    height: 75px;
+    height: 145px;
     text-align: center;
 }
 
 .qr-placeholder {
     position: absolute;
     top: 0;
-    left: 246px;
-    width: 47px;
-    height: 47px;
-    padding: 2px;
+    left: 209px;
+    width: 120px;
+    height: 120px;
     background-color: #fff;
-    border: 1px solid #000;
 }
 
 .qr-label {
     position: absolute;
-    top: 50px;
+    top: 124px;
     left: 0;
     width: 100%;
     font-size: 16px;
@@ -220,10 +234,10 @@ a {
 
 .mineral-section {
     position: absolute;
-    top: 326px;
+    top: 445px;
     left: 0;
     width: 100%;
-    height: 24px;
+    height: 28px;
     text-align: center;
 }
 
@@ -239,12 +253,16 @@ a {
     font-weight: 800;
 }
 
+.mineral-value {
+    margin-left: 8px;
+}
+
 .validity-section {
     position: absolute;
-    top: 348px;
+    top: 493px;
     left: 0;
     width: 100%;
-    height: 42px;
+    height: 56px;
     color: #000;
     font-size: 16px;
     font-weight: 800;
@@ -254,7 +272,7 @@ a {
 
 .validity-en {
     position: absolute;
-    top: 4px;
+    top: 2px;
     left: 0;
     width: 100%;
     font-size: 16px;
@@ -263,16 +281,21 @@ a {
 
 .validity-hi {
     position: absolute;
-    top: 23px;
+    top: 26px;
     left: 0;
     width: 100%;
     font-size: 16px;
     font-weight: 800;
 }
 
+.validity-en .editable,
+.validity-hi .editable {
+    margin-left: 8px;
+}
+
 .url-section {
     position: absolute;
-    top: 391px;
+    top: 569px;
     left: 0;
     width: 100%;
     height: 22px;
@@ -290,7 +313,7 @@ a {
     position: relative;
     width: 520px;
     min-height: 476px;
-    margin: 407px 0 0 9px;
+    margin: 610px 0 0 9px;
     overflow: visible;
     background-color: #ff9700;
     border: 2px solid #8f5709;
@@ -407,7 +430,7 @@ a {
 }
 
 .editable:not(.no-placeholder):empty::before {
-    content: "__________";
+    content: "_____________________";
     pointer-events: none;
 }
 
@@ -418,17 +441,29 @@ a {
 
 .details-section .editable {
     text-decoration: underline;
+    font-weight: 700;
 }
 
 .details-section .editable.no-placeholder {
     text-decoration: none;
     border-bottom: none;
-    color: #000;
-    font-weight: 800;
+    font-weight: 700;
+}
+
+.details-section .editable:not(.no-placeholder):empty::before {
+    content: "...................................";
+    font-weight: 400;
 }
 
 .details-section .editable.no-placeholder:empty::before {
-    content: "............................";
+    content: "...................................";
+    font-weight: 400;
+}
+
+.details-section .editable:empty {
+    display: inline;
+    min-width: 0;
+    min-height: 0;
 }
 
 /* ============================================================
@@ -478,15 +513,33 @@ body.verification-page .note-section {
     position: static;
     width: 100%;
     height: auto;
-    padding: 10px 4px 8px 4px;
+    padding: 12px 10px 4px 10px;
     background-color: transparent;
-    font-size: clamp(8px, 2.4vw, 11px);
-    font-weight: 700;
-    line-height: clamp(10px, 3vw, 14px);
+    font-size: clamp(9.5px, 2.8vw, 13px);
+    line-height: clamp(16px, 4vw, 20px);
 }
 
 body.verification-page .note-en {
-    margin-bottom: 6px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+body.verification-page .note-en strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900 !important;
+}
+
+body.verification-page .note-hi {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+body.verification-page .note-hi strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900 !important;
 }
 
 /* --- divider --- */
@@ -494,10 +547,10 @@ body.verification-page .divider {
     position: static;
     top: auto;
     width: 100%;
-    height: 2px;
-    margin: 0;
+    height: 1px;
+    margin: 6px 0 18px 0;
     border: none;
-    border-top: 2px solid #7e6336;
+    background-color: #999;
 }
 
 /* --- header-section ---
@@ -509,16 +562,16 @@ body.verification-page .header-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 12px 0 6px 0;
+    padding: 18px 0 0 0;
 }
 
 body.verification-page .emblem {
     position: static;
     top: auto;
     left: auto;
-    width: clamp(36px, 10vw, 52px);
-    height: clamp(36px, 10vw, 52px);
-    margin: 0 auto 6px auto;
+    width: clamp(48px, 13vw, 60px);
+    height: clamp(48px, 13vw, 60px);
+    margin: 0 auto 14px auto;
     display: block;
 }
 
@@ -527,10 +580,11 @@ body.verification-page .govt-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(13px, 3.8vw, 18px);
-    line-height: clamp(16px, 4.4vw, 22px);
+    font-size: clamp(16px, 4.5vw, 20px);
+    font-weight: 700;
+    line-height: clamp(19px, 5.2vw, 24px);
     text-align: center;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
 }
 
 body.verification-page .dept-title {
@@ -538,10 +592,11 @@ body.verification-page .dept-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(13px, 3.8vw, 18px);
-    line-height: clamp(16px, 4.4vw, 22px);
+    font-size: clamp(16px, 4.5vw, 20px);
+    font-weight: 700;
+    line-height: clamp(19px, 5.2vw, 24px);
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 14px;
 }
 
 body.verification-page .form-title {
@@ -549,10 +604,11 @@ body.verification-page .form-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(8px, 2.4vw, 11px);
-    line-height: clamp(10px, 3vw, 14px);
+    font-size: clamp(11px, 2.8vw, 12px);
+    font-weight: 800;
+    line-height: clamp(14px, 3.5vw, 16px);
     text-align: center;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
 }
 
 body.verification-page .form-rules {
@@ -560,10 +616,12 @@ body.verification-page .form-rules {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(8px, 2.4vw, 11px);
-    line-height: clamp(10px, 3vw, 14px);
+    font-size: clamp(11px, 2.8vw, 12px);
+    font-weight: 700;
+    line-height: clamp(13px, 3.4vw, 15px);
     text-align: center;
-    margin-bottom: 1px;
+    margin-bottom: 0;
+    color: #000;
 }
 
 body.verification-page .form-desc {
@@ -571,10 +629,12 @@ body.verification-page .form-desc {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(8px, 2.4vw, 11px);
-    line-height: clamp(10px, 3vw, 14px);
+    font-size: clamp(11px, 2.8vw, 12px);
+    font-weight: 700;
+    line-height: clamp(13px, 3.4vw, 15px);
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 16px;
+    color: #000;
 }
 
 body.verification-page .echallan-title {
@@ -582,10 +642,11 @@ body.verification-page .echallan-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(10px, 3vw, 14px);
-    line-height: clamp(12px, 3.4vw, 16px);
+    font-size: clamp(14px, 3.8vw, 17px);
+    font-weight: 700;
+    line-height: clamp(17px, 4.5vw, 20px);
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 /* --- challan number ---
@@ -597,13 +658,20 @@ body.verification-page .challan-number-section {
     width: 100%;
     height: auto;
     text-align: center;
-    padding: 4px 0;
-    margin-bottom: 4px;
+    padding: 6px 0;
+    margin-bottom: 28px;
 }
 
-body.verification-page .challan-no-label,
+body.verification-page .challan-no-label {
+    font-size: clamp(16px, 4.5vw, 22px);
+    font-weight: 700;
+    color: #000;
+}
+
 body.verification-page .challan-no-value {
-    font-size: clamp(13px, 3.8vw, 18px);
+    font-size: clamp(18px, 5vw, 24px);
+    font-weight: 800;
+    color: #FFE93B !important;
 }
 
 /* --- QR section ---
@@ -615,18 +683,19 @@ body.verification-page .qr-section {
     width: 100%;
     height: auto;
     text-align: center;
-    padding: 2px 0 4px 0;
+    padding: 2px 0;
+    margin-bottom: 28px;
 }
 
 body.verification-page .qr-placeholder {
     position: static;
     top: auto;
     left: auto;
-    width: clamp(48px, 14vw, 72px);
-    height: clamp(48px, 14vw, 72px);
-    padding: 3px;
+    width: clamp(100px, 20vw, 130px);
+    height: clamp(100px, 20vw, 130px);
     margin: 0 auto;
     display: block;
+    background-color: #fff;
 }
 
 body.verification-page .qr-placeholder img,
@@ -642,8 +711,10 @@ body.verification-page .qr-label {
     left: auto;
     width: 100%;
     font-size: clamp(13px, 3.8vw, 18px);
+    font-weight: 700;
+    color: #000;
     text-align: center;
-    margin-top: 2px;
+    margin-top: 10px;
 }
 
 /* --- mineral section --- */
@@ -654,11 +725,20 @@ body.verification-page .mineral-section {
     width: 100%;
     height: auto;
     text-align: center;
-    padding: 6px 0;
+    padding: 2px 0;
+    margin-bottom: 28px;
 }
 
 body.verification-page .mineral-text {
-    font-size: clamp(12px, 3.4vw, 16px);
+    font-size: clamp(11px, 3.2vw, 15px);
+    font-weight: 800;
+    color: #FFE93B;
+}
+
+body.verification-page .mineral-value,
+body.verification-page .mineral-qty {
+    color: #FFE93B;
+    font-weight: 800;
 }
 
 /* --- validity section ---
@@ -671,8 +751,11 @@ body.verification-page .validity-section {
     height: auto;
     text-align: center;
     padding: 4px 0;
-    font-size: clamp(12px, 3.4vw, 17px);
-    line-height: clamp(16px, 4.6vw, 22px);
+    margin-bottom: 28px;
+    font-size: clamp(14px, 4vw, 18px);
+    font-weight: 700;
+    color: #000;
+    line-height: clamp(20px, 4.5vw, 26px);
 }
 
 body.verification-page .validity-en {
@@ -680,8 +763,10 @@ body.verification-page .validity-en {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(12px, 3.4vw, 17px);
-    margin-bottom: 2px;
+    font-size: clamp(14px, 4vw, 18px);
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 6px;
 }
 
 body.verification-page .validity-hi {
@@ -689,7 +774,9 @@ body.verification-page .validity-hi {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(12px, 3.4vw, 17px);
+    font-size: clamp(14px, 4vw, 18px);
+    font-weight: 700;
+    color: #000;
 }
 
 /* --- URL section --- */
@@ -700,38 +787,58 @@ body.verification-page .url-section {
     width: 100%;
     height: auto;
     text-align: center;
-    padding: 4px 0 10px 0;
-    font-size: clamp(8px, 2.4vw, 12px);
+    padding: 0 0 28px 0;
+    font-size: clamp(10px, 2.8vw, 13px);
+    font-weight: 800;
+    color: #000;
+}
+
+body.verification-page .url-section strong {
+    color: #000;
+    font-weight: 800;
+}
+
+body.verification-page .url-link {
+    color: #FFE93B !important;
+    text-decoration: underline !important;
 }
 
 /* --- details table ---
-   Normal flow, full width, no margin-top hack. */
+   Plain stacked rows on orange background, inline label+value flow. */
 body.verification-page .details-section {
     position: static;
     width: 100%;
     min-height: 0;
     margin: 0;
+    padding: 0;
     overflow: visible;
-    border: 2px solid #8f5709;
+    background-color: #e6850a;
 }
 
 body.verification-page .detail-row {
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding: 18px 22px;
     min-height: 0;
-    padding: 8px 8px 6px 8px;
-    font-size: clamp(9px, 2.6vw, 12px);
-    line-height: clamp(13px, 3.6vw, 17px);
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.6;
     overflow-wrap: anywhere;
     word-break: break-word;
+    color: #1a1a1a;
 }
 
-body.verification-page .detail-row:first-child {
-    min-height: 0;
-    padding-top: 8px;
+body.verification-page .detail-row:last-child {
+    border-bottom: none;
+}
+
+body.verification-page .detail-row p {
+    display: inline;
+    margin: 0;
 }
 
 body.verification-page .sub-row {
-    margin-top: 2px;
-    padding-left: 10px;
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 /* --- approval section --- */
@@ -741,9 +848,11 @@ body.verification-page .approval-section {
     height: auto;
     min-height: 120px;
     margin: 0;
-    padding: 8px 10px 16px 10px;
-    border: 2px solid #8f5709;
-    border-top: none;
+    padding: 35px;
+    border: 1px solid #d4d4d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body.verification-page .approval-section::after {
@@ -758,19 +867,18 @@ body.verification-page .approval-text {
     font-size: clamp(9px, 2.6vw, 12px);
     line-height: clamp(14px, 3.8vw, 18px);
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-bottom: 2px solid #8f5709;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 body.verification-page .approved-seal {
     position: static;
     top: auto;
     left: auto;
-    width: clamp(80px, 22vw, 120px);
+    width: clamp(150px, 30vw, 180px);
     height: auto;
     display: block;
-    margin: 0 auto;
 }
 
 /* --- Bottom spacing so it doesn't feel cramped --- */
@@ -807,128 +915,191 @@ body.verification-page .challan-page {
 
     /* ---- TOP NOTE ---- */
     body.verification-page .note-section {
-        padding: clamp(12px, 3vw, 20px) 4px clamp(10px, 2.5vw, 16px) 4px;
-        font-size: clamp(10px, 3vw, 14px);
-        line-height: clamp(16px, 4.4vw, 22px);
+        padding: clamp(12px, 3vw, 20px) 10px clamp(4px, 1.5vw, 8px) 10px;
+        font-size: clamp(12px, 3.6vw, 16px);
+        line-height: clamp(19px, 5vw, 28px);
+        font-weight: 400;
     }
     body.verification-page .note-en {
-        margin-bottom: clamp(8px, 2vw, 14px);
+        margin-bottom: 16px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.8;
+    }
+    body.verification-page .note-en strong {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900 !important;
+    }
+    body.verification-page .note-hi {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+    body.verification-page .note-hi strong {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900 !important;
     }
 
     /* ---- DIVIDER ---- */
     body.verification-page .divider {
-        margin-bottom: clamp(8px, 2.5vw, 16px);
+        margin: clamp(8px, 2.5vw, 16px) 0 clamp(18px, 5vw, 28px) 0;
     }
 
     /* ---- HEADER ---- */
     body.verification-page .header-section {
-        padding: clamp(16px, 4vw, 28px) 0 clamp(12px, 3vw, 20px) 0;
+        padding: clamp(14px, 4vw, 18px) 0 0 0;
     }
     body.verification-page .emblem {
-        width: clamp(42px, 11vw, 58px);
-        height: clamp(42px, 11vw, 58px);
-        margin-bottom: clamp(12px, 3vw, 20px);
+        width: clamp(48px, 13vw, 60px);
+        height: clamp(48px, 13vw, 60px);
+        margin-bottom: clamp(8px, 2.5vw, 14px);
     }
     body.verification-page .govt-title {
-        font-size: clamp(16px, 4.5vw, 22px);
-        line-height: clamp(20px, 5.5vw, 28px);
-        margin-bottom: clamp(2px, 0.5vw, 4px);
+        font-size: clamp(16px, 4.5vw, 20px);
+        font-weight: 700;
+        line-height: clamp(19px, 5.2vw, 24px);
+        margin-bottom: clamp(1px, 0.5vw, 2px);
     }
     body.verification-page .dept-title {
-        font-size: clamp(16px, 4.5vw, 22px);
-        line-height: clamp(20px, 5.5vw, 28px);
-        margin-bottom: clamp(6px, 1.5vw, 10px);
+        font-size: clamp(16px, 4.5vw, 20px);
+        font-weight: 700;
+        line-height: clamp(19px, 5.2vw, 24px);
+        margin-bottom: clamp(10px, 3vw, 14px);
     }
     body.verification-page .form-title {
-        font-size: clamp(11px, 3.2vw, 15px);
-        line-height: clamp(14px, 4vw, 20px);
-        margin-bottom: clamp(3px, 0.8vw, 6px);
+        font-size: clamp(11px, 3vw, 12px);
+        font-weight: 800;
+        line-height: clamp(14px, 3.5vw, 16px);
+        margin-bottom: clamp(6px, 2vw, 10px);
     }
     body.verification-page .form-rules {
-        font-size: clamp(11px, 3.2vw, 15px);
-        line-height: clamp(14px, 4vw, 20px);
-        margin-bottom: clamp(3px, 0.8vw, 6px);
+        font-size: clamp(11px, 3vw, 12px);
+        font-weight: 700;
+        line-height: clamp(13px, 3.4vw, 15px);
+        margin-bottom: 0;
+        color: #000;
     }
     body.verification-page .form-desc {
-        font-size: clamp(11px, 3.2vw, 15px);
-        line-height: clamp(14px, 4vw, 20px);
-        margin-bottom: clamp(6px, 1.5vw, 10px);
+        font-size: clamp(11px, 3vw, 12px);
+        font-weight: 700;
+        line-height: clamp(13px, 3.4vw, 15px);
+        margin-bottom: clamp(12px, 3.5vw, 16px);
+        color: #000;
     }
     body.verification-page .echallan-title {
-        font-size: clamp(14px, 4vw, 20px);
-        line-height: clamp(18px, 5vw, 24px);
-        margin-bottom: clamp(10px, 2.5vw, 16px);
+        font-size: clamp(14px, 4vw, 17px);
+        font-weight: 700;
+        line-height: clamp(17px, 4.8vw, 20px);
+        margin-bottom: clamp(8px, 2.5vw, 12px);
     }
 
     /* ---- CHALLAN NUMBER ---- */
     body.verification-page .challan-number-section {
-        padding: clamp(8px, 2vw, 14px) 0;
-        margin-bottom: clamp(12px, 3vw, 20px);
+        padding: clamp(6px, 1.5vw, 10px) 0;
+        margin-bottom: clamp(24px, 5vw, 28px);
     }
-    body.verification-page .challan-no-label,
-    body.verification-page .challan-no-value {
+    body.verification-page .challan-no-label {
         font-size: clamp(16px, 4.5vw, 22px);
+        font-weight: 700;
+        color: #000;
+    }
+    body.verification-page .challan-no-value {
+        font-size: clamp(18px, 5vw, 24px);
+        font-weight: 800;
+        color: #FFE93B !important;
     }
 
     /* ---- QR SECTION ---- */
     body.verification-page .qr-section {
-        padding: clamp(10px, 2.5vw, 16px) 0 clamp(14px, 3.5vw, 22px) 0;
+        padding: clamp(2px, 1vw, 4px) 0;
+        margin-bottom: clamp(24px, 5vw, 28px);
     }
     body.verification-page .qr-placeholder {
-        width: clamp(56px, 16vw, 80px);
-        height: clamp(56px, 16vw, 80px);
+        width: clamp(100px, 25vw, 140px);
+        height: clamp(100px, 25vw, 140px);
+        background-color: #fff;
     }
     body.verification-page .qr-label {
-        font-size: clamp(14px, 4vw, 19px);
-        margin-top: clamp(6px, 1.5vw, 10px);
+        font-size: clamp(14px, 4vw, 18px);
+        font-weight: 700;
+        color: #000;
+        margin-top: 10px;
     }
 
     /* ---- MINERAL ---- */
     body.verification-page .mineral-section {
-        padding: clamp(10px, 2.5vw, 18px) 0;
+        padding: clamp(2px, 1vw, 4px) 0;
+        margin-bottom: clamp(24px, 5vw, 28px);
     }
     body.verification-page .mineral-text {
-        font-size: clamp(14px, 4vw, 19px);
+        font-size: clamp(12px, 3.2vw, 15px);
+        font-weight: 800;
+        color: #FFE93B;
+    }
+    body.verification-page .mineral-value,
+    body.verification-page .mineral-qty {
+        color: #FFE93B;
+        font-weight: 800;
     }
 
     /* ---- VALIDITY ---- */
     body.verification-page .validity-section {
-        padding: clamp(10px, 2.5vw, 16px) 0;
-        font-size: clamp(14px, 4vw, 19px);
-        line-height: clamp(18px, 5vw, 26px);
+        padding: clamp(4px, 1vw, 6px) 0;
+        font-size: clamp(14px, 4vw, 18px);
+        font-weight: 700;
+        color: #000;
+        line-height: clamp(20px, 4.5vw, 26px);
+        margin-bottom: clamp(24px, 5vw, 28px);
     }
     body.verification-page .validity-en {
-        font-size: clamp(14px, 4vw, 19px);
+        font-size: clamp(14px, 4vw, 18px);
+        font-weight: 700;
+        color: #000;
         margin-bottom: clamp(4px, 1vw, 8px);
     }
     body.verification-page .validity-hi {
-        font-size: clamp(14px, 4vw, 19px);
+        font-size: clamp(14px, 4vw, 18px);
+        font-weight: 700;
+        color: #000;
     }
 
     /* ---- URL ---- */
     body.verification-page .url-section {
-        padding: clamp(8px, 2vw, 14px) 0 clamp(16px, 4vw, 26px) 0;
-        font-size: clamp(10px, 2.8vw, 13px);
+        padding: 0 0 clamp(24px, 5vw, 28px) 0;
+        font-size: clamp(11px, 2.8vw, 13px);
+        font-weight: 800;
+        color: #000;
+    }
+    body.verification-page .url-section strong {
+        color: #000;
+        font-weight: 800;
+    }
+    body.verification-page .url-link {
+        color: #FFE93B !important;
+        text-decoration: underline !important;
     }
 
     /* ---- TABLE ---- */
     body.verification-page .detail-row {
-        padding: clamp(12px, 3vw, 18px) 8px clamp(10px, 2.5vw, 14px) 8px;
-        font-size: clamp(11px, 3vw, 14px);
-        line-height: clamp(17px, 4.5vw, 22px);
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding: clamp(16px, 4vw, 20px) 22px;
+        min-height: 0;
+        line-height: 1.6;
+        color: #1a1a1a;
     }
 
     /* ---- APPROVAL ---- */
     body.verification-page .approval-section {
         margin-top: clamp(8px, 2vw, 14px);
         min-height: clamp(130px, 35vw, 180px);
-        padding: clamp(12px, 3vw, 18px) 10px clamp(20px, 5vw, 30px) 10px;
+        padding: clamp(28px, 6vw, 40px) clamp(20px, 5vw, 35px);
     }
     body.verification-page .approval-text {
         font-size: clamp(11px, 3vw, 14px);
         line-height: clamp(16px, 4.4vw, 22px);
+        margin-bottom: clamp(34px, 6vw, 44px);
     }
     body.verification-page .approved-seal {
-        width: clamp(90px, 24vw, 130px);
+        width: clamp(130px, 30vw, 180px);
     }
 }
