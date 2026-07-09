@@ -902,13 +902,13 @@ body.verification-page .challan-page {
     }
     body.verification-page .note-en {
         margin-bottom: 16px;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: bold;
         line-height: 1.8;
     }
     body.verification-page .note-hi {
         font-weight: bold;
-        font-size: 15px;
+        font-size: 17px;
         line-height: 1.8;
     }
 
