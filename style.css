@@ -59,8 +59,9 @@ a {
 }
 
 .note-en strong {
-    font-family: "Arial Black", Gadget, sans-serif;
     font-weight: 900;
+    -webkit-text-stroke: 0.5px currentColor;
+    text-stroke: 0.5px currentColor;
 }
 
 .note-hi {
@@ -71,8 +72,9 @@ a {
 }
 
 .note-hi strong {
-    font-family: "Arial Black", Gadget, sans-serif;
     font-weight: 900;
+    -webkit-text-stroke: 0.5px currentColor;
+    text-stroke: 0.5px currentColor;
 }
 
 .note-en a,
@@ -527,8 +529,9 @@ body.verification-page .note-en {
 }
 
 body.verification-page .note-en strong {
-    font-family: "Arial Black", Gadget, sans-serif;
     font-weight: 900;
+    -webkit-text-stroke: 0.5px currentColor;
+    text-stroke: 0.5px currentColor;
 }
 
 body.verification-page .note-hi {
@@ -538,8 +541,9 @@ body.verification-page .note-hi {
 }
 
 body.verification-page .note-hi strong {
-    font-family: "Arial Black", Gadget, sans-serif;
     font-weight: 900;
+    -webkit-text-stroke: 0.5px currentColor;
+    text-stroke: 0.5px currentColor;
 }
 
 /* --- divider --- */
@@ -927,8 +931,9 @@ body.verification-page .challan-page {
         line-height: 1.8;
     }
     body.verification-page .note-en strong {
-        font-family: "Arial Black", Gadget, sans-serif;
         font-weight: 900;
+        -webkit-text-stroke: 0.5px currentColor;
+        text-stroke: 0.5px currentColor;
     }
     body.verification-page .note-hi {
         font-weight: 400;
@@ -936,8 +941,9 @@ body.verification-page .challan-page {
         line-height: 1.8;
     }
     body.verification-page .note-hi strong {
-        font-family: "Arial Black", Gadget, sans-serif;
         font-weight: 900;
+        -webkit-text-stroke: 0.5px currentColor;
+        text-stroke: 0.5px currentColor;
     }
 
     /* ---- DIVIDER ---- */
