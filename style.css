@@ -53,28 +53,16 @@ a {
 
 .note-en {
     margin-bottom: 16px;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 17px;
     line-height: 1.8;
-}
-
-.note-en strong {
-    font-weight: 900;
-    -webkit-text-stroke: 0.5px currentColor;
-    text-stroke: 0.5px currentColor;
 }
 
 .note-hi {
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 17px;
     line-height: 1.8;
-}
-
-.note-hi strong {
-    font-weight: 900;
-    -webkit-text-stroke: 0.5px currentColor;
-    text-stroke: 0.5px currentColor;
 }
 
 .note-en a,
@@ -522,28 +510,16 @@ body.verification-page .note-section {
 }
 
 body.verification-page .note-en {
-    font-weight: 400;
+    font-weight: bold;
     margin-bottom: 16px;
     font-size: 17px;
     line-height: 1.8;
 }
 
-body.verification-page .note-en strong {
-    font-weight: 900;
-    -webkit-text-stroke: 0.5px currentColor;
-    text-stroke: 0.5px currentColor;
-}
-
 body.verification-page .note-hi {
-    font-weight: 400;
+    font-weight: bold;
     font-size: 17px;
     line-height: 1.8;
-}
-
-body.verification-page .note-hi strong {
-    font-weight: 900;
-    -webkit-text-stroke: 0.5px currentColor;
-    text-stroke: 0.5px currentColor;
 }
 
 /* --- divider --- */
@@ -927,23 +903,13 @@ body.verification-page .challan-page {
     body.verification-page .note-en {
         margin-bottom: 16px;
         font-size: 15px;
-        font-weight: 400;
+        font-weight: bold;
         line-height: 1.8;
-    }
-    body.verification-page .note-en strong {
-        font-weight: 900;
-        -webkit-text-stroke: 0.5px currentColor;
-        text-stroke: 0.5px currentColor;
     }
     body.verification-page .note-hi {
-        font-weight: 400;
+        font-weight: bold;
         font-size: 15px;
         line-height: 1.8;
-    }
-    body.verification-page .note-hi strong {
-        font-weight: 900;
-        -webkit-text-stroke: 0.5px currentColor;
-        text-stroke: 0.5px currentColor;
     }
 
     /* ---- DIVIDER ---- */
