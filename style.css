@@ -560,9 +560,9 @@ body.verification-page .govt-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(22px, 6vw, 26px);
+    font-size: clamp(28px, 7vw, 32px);
     font-weight: 700;
-    line-height: clamp(26px, 6.5vw, 30px);
+    line-height: clamp(32px, 7.5vw, 36px);
     text-align: center;
     margin-bottom: 2px;
 }
@@ -572,9 +572,9 @@ body.verification-page .dept-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(22px, 6vw, 26px);
+    font-size: clamp(28px, 7vw, 32px);
     font-weight: 700;
-    line-height: clamp(26px, 6.5vw, 30px);
+    line-height: clamp(32px, 7.5vw, 36px);
     text-align: center;
     margin-bottom: 14px;
 }
@@ -596,9 +596,9 @@ body.verification-page .form-rules {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(11px, 2.8vw, 12px);
+    font-size: clamp(12px, 3.2vw, 17px);
     font-weight: 700;
-    line-height: clamp(13px, 3.4vw, 15px);
+    line-height: clamp(15px, 3.6vw, 20px);
     text-align: center;
     margin-bottom: 0;
     color: #000;
@@ -609,9 +609,9 @@ body.verification-page .form-desc {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(14px, 3.5vw, 16px);
+    font-size: clamp(14px, 3.5vw, 19px);
     font-weight: 700;
-    line-height: clamp(17px, 4vw, 19px);
+    line-height: clamp(19px, 4.2vw, 23px);
     text-align: center;
     margin-bottom: 16px;
     color: #000;
@@ -639,20 +639,19 @@ body.verification-page .challan-number-section {
     height: auto;
     text-align: center;
     padding: 6px 0;
-    margin-bottom: 28px;
+    margin-bottom: 8px;
 }
 
 body.verification-page .challan-no-label {
-    font-size: clamp(19px, 5vw, 25px);
-    font-weight: 700;
+    font-size: clamp(24px, 6vw, 30px);
+    font-weight: 800;
     color: #000;
 }
 
 body.verification-page .challan-no-value {
     display: inline;
     word-break: break-word;
-    margin-left: 8px;
-    font-size: clamp(22px, 6vw, 28px);
+    font-size: clamp(28px, 7vw, 34px);
     font-weight: 800;
     color: #FFE93B !important;
 }
@@ -666,7 +665,7 @@ body.verification-page .qr-section {
     width: 100%;
     height: auto;
     text-align: center;
-    padding: 2px 0;
+    padding: 0 0 2px 0;
     margin-bottom: 16px;
 }
 
@@ -693,11 +692,11 @@ body.verification-page .qr-label {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(13px, 3.8vw, 18px);
+    font-size: clamp(15px, 4vw, 20px);
     font-weight: 700;
     color: #000;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 4px;
 }
 
 /* --- mineral section --- */
@@ -713,7 +712,7 @@ body.verification-page .mineral-section {
 }
 
 body.verification-page .mineral-text {
-    font-size: clamp(16px, 4.5vw, 20px);
+    font-size: clamp(20px, 5vw, 24px);
     font-weight: 800;
     color: #FFE93B;
 }
@@ -930,15 +929,15 @@ body.verification-page .challan-page {
         margin-bottom: clamp(8px, 2.5vw, 14px);
     }
     body.verification-page .govt-title {
-        font-size: clamp(22px, 6vw, 26px);
+        font-size: clamp(28px, 7vw, 32px);
         font-weight: 700;
-        line-height: clamp(26px, 6.5vw, 30px);
+        line-height: clamp(32px, 7.5vw, 36px);
         margin-bottom: clamp(1px, 0.5vw, 2px);
     }
     body.verification-page .dept-title {
-        font-size: clamp(22px, 6vw, 26px);
+        font-size: clamp(28px, 7vw, 32px);
         font-weight: 700;
-        line-height: clamp(26px, 6.5vw, 30px);
+        line-height: clamp(32px, 7.5vw, 36px);
         margin-bottom: clamp(10px, 3vw, 14px);
     }
     body.verification-page .form-title {
@@ -948,16 +947,16 @@ body.verification-page .challan-page {
         margin-bottom: clamp(6px, 2vw, 10px);
     }
     body.verification-page .form-rules {
-        font-size: clamp(11px, 3vw, 12px);
+        font-size: clamp(12px, 3.2vw, 17px);
         font-weight: 700;
-        line-height: clamp(13px, 3.4vw, 15px);
+        line-height: clamp(15px, 3.6vw, 20px);
         margin-bottom: 0;
         color: #000;
     }
     body.verification-page .form-desc {
-        font-size: clamp(14px, 3.5vw, 16px);
+        font-size: clamp(14px, 3.8vw, 19px);
         font-weight: 700;
-        line-height: clamp(17px, 4vw, 19px);
+        line-height: clamp(19px, 4.2vw, 23px);
         margin-bottom: clamp(12px, 3.5vw, 16px);
         color: #000;
     }
@@ -971,25 +970,24 @@ body.verification-page .challan-page {
     /* ---- CHALLAN NUMBER ---- */
     body.verification-page .challan-number-section {
         padding: clamp(6px, 1.5vw, 10px) 0;
-        margin-bottom: clamp(24px, 5vw, 28px);
+        margin-bottom: clamp(8px, 2vw, 12px);
     }
     body.verification-page .challan-no-label {
-        font-size: clamp(19px, 5vw, 25px);
-        font-weight: 700;
+        font-size: clamp(24px, 6vw, 30px);
+        font-weight: 800;
         color: #000;
     }
     body.verification-page .challan-no-value {
         display: inline;
         word-break: break-word;
-        margin-left: 8px;
-        font-size: clamp(22px, 6vw, 28px);
+        font-size: clamp(28px, 7vw, 34px);
         font-weight: 800;
         color: #FFE93B !important;
     }
 
     /* ---- QR SECTION ---- */
     body.verification-page .qr-section {
-        padding: clamp(2px, 1vw, 4px) 0;
+        padding: 0 0 clamp(2px, 1vw, 4px) 0;
         margin-bottom: clamp(12px, 3vw, 16px);
     }
     body.verification-page .qr-placeholder {
@@ -998,10 +996,10 @@ body.verification-page .challan-page {
         background-color: #fff;
     }
     body.verification-page .qr-label {
-        font-size: clamp(14px, 4vw, 18px);
+        font-size: clamp(16px, 4.5vw, 22px);
         font-weight: 700;
         color: #000;
-        margin-top: 10px;
+        margin-top: 4px;
     }
 
     /* ---- MINERAL ---- */
@@ -1010,7 +1008,7 @@ body.verification-page .challan-page {
         margin-bottom: clamp(24px, 5vw, 28px);
     }
     body.verification-page .mineral-text {
-        font-size: clamp(17px, 4.5vw, 20px);
+        font-size: clamp(21px, 5.5vw, 26px);
         font-weight: 800;
         color: #FFE93B;
     }
