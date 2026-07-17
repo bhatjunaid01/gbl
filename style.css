@@ -129,12 +129,12 @@ a {
 
 .form-title {
     position: absolute;
-    top: 122px;
+    top: 120px;
     left: 0;
     width: 100%;
-    font-size: 9.6px;
+    font-size: 12px;
     font-weight: 800;
-    line-height: 12px;
+    line-height: 14px;
     text-align: center;
 }
 
@@ -154,6 +154,10 @@ a {
     top: 148px;
     left: 0;
     width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
     font-size: 9.6px;
     font-weight: normal;
     line-height: 11px;
@@ -549,8 +553,8 @@ body.verification-page .emblem {
     position: static;
     top: auto;
     left: auto;
-    width: clamp(48px, 13vw, 60px);
-    height: clamp(48px, 13vw, 60px);
+    width: clamp(65px, 17.5vw, 80px);
+    height: clamp(65px, 17.5vw, 80px);
     margin: 0 auto 14px auto;
     display: block;
 }
@@ -560,11 +564,11 @@ body.verification-page .govt-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(28px, 7vw, 32px);
+    font-size: clamp(24px, 6vw, 30px);
     font-weight: 700;
-    line-height: clamp(32px, 7.5vw, 36px);
+    line-height: clamp(27px, 6.5vw, 33px);
     text-align: center;
-    margin-bottom: 2px;
+    margin-bottom: 0;
 }
 
 body.verification-page .dept-title {
@@ -572,9 +576,9 @@ body.verification-page .dept-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(28px, 7vw, 32px);
+    font-size: clamp(24px, 6vw, 30px);
     font-weight: 700;
-    line-height: clamp(32px, 7.5vw, 36px);
+    line-height: clamp(27px, 6.5vw, 33px);
     text-align: center;
     margin-bottom: 14px;
 }
@@ -584,9 +588,9 @@ body.verification-page .form-title {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(11px, 2.8vw, 12px);
+    font-size: clamp(19px, 4.8vw, 23px);
     font-weight: 800;
-    line-height: clamp(14px, 3.5vw, 16px);
+    line-height: clamp(22px, 5.2vw, 26px);
     text-align: center;
     margin-bottom: 10px;
 }
@@ -596,9 +600,9 @@ body.verification-page .form-rules {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(12px, 3.2vw, 17px);
-    font-weight: 700;
-    line-height: clamp(15px, 3.6vw, 20px);
+    font-size: clamp(16px, 4vw, 19px);
+    font-weight: normal;
+    line-height: clamp(19px, 4.4vw, 22px);
     text-align: center;
     margin-bottom: 0;
     color: #000;
@@ -609,9 +613,9 @@ body.verification-page .form-desc {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(14px, 3.5vw, 19px);
-    font-weight: 700;
-    line-height: clamp(19px, 4.2vw, 23px);
+    font-size: clamp(18px, 4.4vw, 21px);
+    font-weight: normal;
+    line-height: clamp(21px, 4.8vw, 24px);
     text-align: center;
     margin-bottom: 16px;
     color: #000;
@@ -924,39 +928,39 @@ body.verification-page .challan-page {
         padding: clamp(14px, 4vw, 18px) 0 0 0;
     }
     body.verification-page .emblem {
-        width: clamp(48px, 13vw, 60px);
-        height: clamp(48px, 13vw, 60px);
+        width: clamp(65px, 17.5vw, 80px);
+        height: clamp(65px, 17.5vw, 80px);
         margin-bottom: clamp(8px, 2.5vw, 14px);
     }
     body.verification-page .govt-title {
-        font-size: clamp(28px, 7vw, 32px);
+        font-size: clamp(24px, 6vw, 30px);
         font-weight: 700;
-        line-height: clamp(32px, 7.5vw, 36px);
-        margin-bottom: clamp(1px, 0.5vw, 2px);
+        line-height: clamp(27px, 6.5vw, 33px);
+        margin-bottom: 0;
     }
     body.verification-page .dept-title {
-        font-size: clamp(28px, 7vw, 32px);
+        font-size: clamp(24px, 6vw, 30px);
         font-weight: 700;
-        line-height: clamp(32px, 7.5vw, 36px);
+        line-height: clamp(27px, 6.5vw, 33px);
         margin-bottom: clamp(10px, 3vw, 14px);
     }
     body.verification-page .form-title {
-        font-size: clamp(11px, 3vw, 12px);
+        font-size: clamp(17px, 4.2vw, 21px);
         font-weight: 800;
-        line-height: clamp(14px, 3.5vw, 16px);
+        line-height: clamp(20px, 4.6vw, 24px);
         margin-bottom: clamp(6px, 2vw, 10px);
     }
     body.verification-page .form-rules {
-        font-size: clamp(12px, 3.2vw, 17px);
-        font-weight: 700;
-        line-height: clamp(15px, 3.6vw, 20px);
+        font-size: clamp(13px, 3.2vw, 19px);
+        font-weight: normal;
+        line-height: clamp(16px, 3.8vw, 22px);
         margin-bottom: 0;
         color: #000;
     }
     body.verification-page .form-desc {
-        font-size: clamp(14px, 3.8vw, 19px);
-        font-weight: 700;
-        line-height: clamp(19px, 4.2vw, 23px);
+        font-size: clamp(14px, 3.8vw, 21px);
+        font-weight: normal;
+        line-height: clamp(17px, 4.2vw, 24px);
         margin-bottom: clamp(12px, 3.5vw, 16px);
         color: #000;
     }
@@ -1077,5 +1081,33 @@ body.verification-page .challan-page {
     }
     body.verification-page .approved-seal {
         width: clamp(130px, 30vw, 180px);
+    }
+}
+
+/* ===== MOBILE: Form Header Overrides ===== */
+@media (max-width: 768px) {
+    .form-title {
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 14px;
+        text-align: center;
+    }
+
+    .form-rules {
+        font-size: 9.6px;
+        font-weight: normal;
+        line-height: 11px;
+        text-align: center;
+    }
+
+    .form-desc {
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        font-size: 9.6px;
+        font-weight: normal;
+        line-height: 11px;
+        text-align: center;
     }
 }
