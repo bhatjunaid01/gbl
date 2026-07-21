@@ -496,7 +496,7 @@ body.verification-page .challan-page {
     max-width: 1160px;
     min-height: auto;
     margin: 30px auto;
-    padding: 0 10px;
+    padding: 0 22px;
     overflow: visible;
     background-color: #ff9700;
 }
@@ -589,7 +589,7 @@ body.verification-page .form-title {
     left: auto;
     width: 100%;
     font-size: clamp(19px, 4.8vw, 23px);
-    font-weight: 800;
+    font-weight: 600;
     line-height: clamp(22px, 5.2vw, 26px);
     text-align: center;
     margin-bottom: 10px;
@@ -601,7 +601,7 @@ body.verification-page .form-rules {
     left: auto;
     width: 100%;
     font-size: clamp(16px, 4vw, 19px);
-    font-weight: normal;
+    font-weight: 600;
     line-height: clamp(19px, 4.4vw, 22px);
     text-align: center;
     margin-bottom: 0;
@@ -614,7 +614,7 @@ body.verification-page .form-desc {
     left: auto;
     width: 100%;
     font-size: clamp(18px, 4.4vw, 21px);
-    font-weight: normal;
+    font-weight: 600;
     line-height: clamp(21px, 4.8vw, 24px);
     text-align: center;
     margin-bottom: 16px;
@@ -647,15 +647,15 @@ body.verification-page .challan-number-section {
 }
 
 body.verification-page .challan-no-label {
-    font-size: clamp(24px, 6vw, 30px);
-    font-weight: 800;
+    font-size: clamp(22px, 5.5vw, 28px);
+    font-weight: 700;
     color: #000;
 }
 
 body.verification-page .challan-no-value {
     display: inline;
     word-break: break-word;
-    font-size: clamp(28px, 7vw, 34px);
+    font-size: clamp(24px, 6vw, 29px);
     font-weight: 800;
     color: #FFE93B !important;
 }
@@ -696,11 +696,11 @@ body.verification-page .qr-label {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(15px, 4vw, 20px);
+    font-size: clamp(19px, 5vw, 24px);
     font-weight: 700;
     color: #000;
     text-align: center;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 /* --- mineral section --- */
@@ -728,20 +728,24 @@ body.verification-page .mineral-qty {
 }
 
 /* --- validity section ---
-   Normal flow. Children also switch to static. */
+   Normal flow. Children also switch to static.
+   Negative side margins break out of parent .challan-page padding
+   so the text stretches nearly edge-to-edge. */
 body.verification-page .validity-section {
     position: static;
     top: auto;
     left: auto;
-    width: 100%;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
     height: auto;
     text-align: center;
-    padding: 4px 0;
+    padding: 4px 4px;
     margin-bottom: 28px;
-    font-size: clamp(14px, 4vw, 18px);
+    font-size: clamp(22px, 6.2vw, 29px);
     font-weight: 700;
     color: #000;
-    line-height: clamp(20px, 4.5vw, 26px);
+    line-height: clamp(30px, 7vw, 40px);
 }
 
 body.verification-page .validity-en {
@@ -749,8 +753,8 @@ body.verification-page .validity-en {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(14px, 4vw, 18px);
-    font-weight: 700;
+    font-size: clamp(22px, 6.2vw, 29px);
+    font-weight: 800;
     color: #000;
     margin-bottom: 6px;
 }
@@ -760,8 +764,8 @@ body.verification-page .validity-hi {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(14px, 4vw, 18px);
-    font-weight: 700;
+    font-size: clamp(22px, 6.2vw, 29px);
+    font-weight: 800;
     color: #000;
 }
 
@@ -774,8 +778,8 @@ body.verification-page .url-section {
     height: auto;
     text-align: center;
     padding: 0 0 28px 0;
-    font-size: clamp(10px, 2.8vw, 13px);
-    font-weight: 800;
+    font-size: clamp(14px, 3.8vw, 17px);
+    font-weight: 700;
     color: #000;
 }
 
@@ -799,6 +803,7 @@ body.verification-page .details-section {
     padding: 0;
     overflow: visible;
     background-color: #e6850a;
+    border: none;
 }
 
 body.verification-page .detail-row {
@@ -833,8 +838,8 @@ body.verification-page .approval-section {
     width: 100%;
     height: auto;
     min-height: 120px;
-    margin: 0;
-    padding: 35px;
+    margin: 56px 0 0 0;
+    padding: 24px 28px 32px 28px;
     border: 1px solid #d4d4d4;
     display: flex;
     flex-direction: column;
@@ -850,19 +855,24 @@ body.verification-page .approval-text {
     top: auto;
     left: auto;
     width: 100%;
-    font-size: clamp(9px, 2.6vw, 12px);
-    line-height: clamp(14px, 3.8vw, 18px);
+    font-size: clamp(12px, 3vw, 14px);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: clamp(16px, 4vw, 20px);
     text-align: center;
     padding-bottom: 12px;
-    border-bottom: 2px solid #8f5709;
-    margin-bottom: 40px;
+    border-bottom: 1px solid #d4d4d4;
+    align-self: stretch;
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-bottom: 28px;
 }
 
 body.verification-page .approved-seal {
     position: static;
     top: auto;
     left: auto;
-    width: clamp(150px, 30vw, 180px);
+    width: clamp(150px, 32vw, 185px);
     height: auto;
     display: block;
 }
@@ -894,8 +904,8 @@ body.verification-page .challan-page {
         width: 100%;
         max-width: none;
         margin: 0;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
         padding-bottom: clamp(16px, 4vw, 28px);
     }
 
@@ -946,20 +956,20 @@ body.verification-page .challan-page {
     }
     body.verification-page .form-title {
         font-size: clamp(17px, 4.2vw, 21px);
-        font-weight: 800;
+        font-weight: 600;
         line-height: clamp(20px, 4.6vw, 24px);
         margin-bottom: clamp(6px, 2vw, 10px);
     }
     body.verification-page .form-rules {
         font-size: clamp(13px, 3.2vw, 19px);
-        font-weight: normal;
+        font-weight: 600;
         line-height: clamp(16px, 3.8vw, 22px);
         margin-bottom: 0;
         color: #000;
     }
     body.verification-page .form-desc {
         font-size: clamp(14px, 3.8vw, 21px);
-        font-weight: normal;
+        font-weight: 600;
         line-height: clamp(17px, 4.2vw, 24px);
         margin-bottom: clamp(12px, 3.5vw, 16px);
         color: #000;
@@ -977,14 +987,14 @@ body.verification-page .challan-page {
         margin-bottom: clamp(8px, 2vw, 12px);
     }
     body.verification-page .challan-no-label {
-        font-size: clamp(24px, 6vw, 30px);
-        font-weight: 800;
+        font-size: clamp(22px, 5.5vw, 28px);
+        font-weight: 700;
         color: #000;
     }
     body.verification-page .challan-no-value {
         display: inline;
         word-break: break-word;
-        font-size: clamp(28px, 7vw, 34px);
+        font-size: clamp(24px, 6vw, 29px);
         font-weight: 800;
         color: #FFE93B !important;
     }
@@ -1000,10 +1010,10 @@ body.verification-page .challan-page {
         background-color: #fff;
     }
     body.verification-page .qr-label {
-        font-size: clamp(16px, 4.5vw, 22px);
+        font-size: clamp(19px, 5vw, 24px);
         font-weight: 700;
         color: #000;
-        margin-top: 4px;
+        margin-top: 2px;
     }
 
     /* ---- MINERAL ---- */
@@ -1024,30 +1034,33 @@ body.verification-page .challan-page {
 
     /* ---- VALIDITY ---- */
     body.verification-page .validity-section {
-        padding: clamp(4px, 1vw, 6px) 0;
-        font-size: clamp(14px, 4vw, 18px);
+        width: calc(100% + 16px);
+        margin-left: -8px;
+        margin-right: -8px;
+        padding: clamp(4px, 1vw, 6px) 2px;
+        font-size: clamp(22px, 6.2vw, 29px);
         font-weight: 700;
         color: #000;
-        line-height: clamp(20px, 4.5vw, 26px);
+        line-height: clamp(30px, 7vw, 40px);
         margin-bottom: clamp(24px, 5vw, 28px);
     }
     body.verification-page .validity-en {
-        font-size: clamp(14px, 4vw, 18px);
-        font-weight: 700;
+        font-size: clamp(22px, 6.2vw, 29px);
+        font-weight: 800;
         color: #000;
         margin-bottom: clamp(4px, 1vw, 8px);
     }
     body.verification-page .validity-hi {
-        font-size: clamp(14px, 4vw, 18px);
-        font-weight: 700;
+        font-size: clamp(22px, 6.2vw, 29px);
+        font-weight: 800;
         color: #000;
     }
 
     /* ---- URL ---- */
     body.verification-page .url-section {
         padding: 0 0 clamp(24px, 5vw, 28px) 0;
-        font-size: clamp(11px, 2.8vw, 13px);
-        font-weight: 800;
+        font-size: clamp(14px, 3.8vw, 17px);
+        font-weight: 700;
         color: #000;
     }
     body.verification-page .url-section strong {
@@ -1070,17 +1083,23 @@ body.verification-page .challan-page {
 
     /* ---- APPROVAL ---- */
     body.verification-page .approval-section {
-        margin-top: clamp(8px, 2vw, 14px);
+        margin-top: clamp(48px, 10vw, 58px);
         min-height: clamp(130px, 35vw, 180px);
-        padding: clamp(28px, 6vw, 40px) clamp(20px, 5vw, 35px);
+        padding: clamp(18px, 4vw, 26px) clamp(16px, 4vw, 28px) clamp(24px, 5vw, 34px) clamp(16px, 4vw, 28px);
+        border: 1px solid #d4d4d4;
     }
     body.verification-page .approval-text {
-        font-size: clamp(11px, 3vw, 14px);
-        line-height: clamp(16px, 4.4vw, 22px);
-        margin-bottom: clamp(34px, 6vw, 44px);
+        font-size: clamp(12px, 3vw, 14px);
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        line-height: clamp(18px, 4.8vw, 24px);
+        border-bottom: 1px solid #d4d4d4;
+        margin-left: -40px;
+        margin-right: -40px;
+        margin-bottom: clamp(20px, 4vw, 28px);
     }
     body.verification-page .approved-seal {
-        width: clamp(130px, 30vw, 180px);
+        width: clamp(130px, 30vw, 170px);
     }
 }
 

@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
@@ -57,8 +57,9 @@ app.get('/challan/:challanNumber', async (req, res, next) => {
     for (const column of FIELD_COLUMNS) fields[COLUMN_TO_DATA_FIELD[column]] = row[column] || '';
     fields['challan-no'] = row.challan_number;
     const qrDataUrl = await QRCode.toDataURL(row.qr_url, {
-      errorCorrectionLevel: 'M',
+      errorCorrectionLevel: 'H',
       margin: 1,
+      width: 400,
       color: { dark: '#4A148C', light: '#FFFFFF' }
     });
     res.send(renderTemplateWithData({

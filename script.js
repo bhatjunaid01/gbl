@@ -73,11 +73,57 @@ document.addEventListener('DOMContentLoaded', function () {
         qrPlaceholder.appendChild(img);
     }
 
+    // --- Validity formatting helpers ---
+    // English: Line 1 = "Validity from [fromDate]"
+    //          Line 2 = "[fromTime] to [toDate] [toTime-hour-min]"
+    //          Line 3 = "[AM/PM]"
+    function formatValidityEn(fromVal, toVal) {
+        var el = document.getElementById('validity-en');
+        if (!el) return;
+
+        var fromParts = (fromVal || '').trim().split(/\s+/);
+        var toParts   = (toVal   || '').trim().split(/\s+/);
+
+        var fromDate      = fromParts[0] || '';          // e.g. "20/07/2026"
+        var fromTime      = fromParts.slice(1).join(' ');// e.g. "07:30 PM"
+        var toDate        = toParts[0] || '';             // e.g. "21/07/2026"
+        var toTimeHourMin = toParts[1] || '';             // e.g. "08:00"
+        var toAmPm        = toParts[2] || '';             // e.g. "AM"
+
+        el.innerHTML = 'Validity from ' + fromDate + '<br>'
+                     + fromTime + ' to ' + toDate + ' ' + toTimeHourMin + '<br>'
+                     + toAmPm;
+    }
+
+    // Hindi: Line 1 = "वैधता [fromDate] [fromTime] से"
+    //        Line 2 = "[toDate] [toTime] तक"
+    function formatValidityHi(fromVal, toVal) {
+        var el = document.getElementById('validity-hi');
+        if (!el) return;
+
+        el.innerHTML = 'वैधता ' + (fromVal || '').trim() + ' से<br>'
+                     + (toVal || '').trim() + ' तक';
+    }
+
+    var VALIDITY_FIELDS = ['validity-from', 'validity-to', 'validity-from-hi', 'validity-to-hi'];
+
     function setFieldValues(fields) {
         Object.entries(fields || {}).forEach(function ([key, value]) {
-            const field = document.querySelector(`[data-field="${key}"]`);
+            // Skip validity fields — they are handled separately below
+            if (VALIDITY_FIELDS.indexOf(key) !== -1) return;
+            var field = document.querySelector('[data-field="' + key + '"]');
             if (field) field.textContent = value == null ? '' : String(value);
         });
+
+        // Rebuild validity paragraphs with line breaks (innerHTML)
+        formatValidityEn(
+            fields['validity-from'],
+            fields['validity-to']
+        );
+        formatValidityHi(
+            fields['validity-from-hi'],
+            fields['validity-to-hi']
+        );
     }
 
     function setReadOnly() {

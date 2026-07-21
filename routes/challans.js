@@ -74,8 +74,9 @@ async function generateUniqueChallanNumber(db) {
 
 async function qrDataUrl(qrUrl) {
   return QRCode.toDataURL(qrUrl, {
-    errorCorrectionLevel: 'M',
+    errorCorrectionLevel: 'H',
     margin: 1,
+    width: 400,
     color: {
       dark: '#4A148C',
       light: '#FFFFFF'
@@ -86,8 +87,9 @@ async function qrDataUrl(qrUrl) {
 async function qrPng(qrUrl) {
   return QRCode.toBuffer(qrUrl, {
     type: 'png',
-    errorCorrectionLevel: 'M',
+    errorCorrectionLevel: 'H',
     margin: 1,
+    width: 400,
     color: {
       dark: '#4A148C',
       light: '#FFFFFF'
