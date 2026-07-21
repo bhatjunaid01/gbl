@@ -863,8 +863,8 @@ body.verification-page .approval-text {
     padding-bottom: 12px;
     border-bottom: 1px solid #d4d4d4;
     align-self: stretch;
-    margin-left: -40px;
-    margin-right: -40px;
+    margin-left: -28px;
+    margin-right: -28px;
     margin-bottom: 28px;
 }
 
@@ -1094,8 +1094,8 @@ body.verification-page .challan-page {
         letter-spacing: 1.5px;
         line-height: clamp(18px, 4.8vw, 24px);
         border-bottom: 1px solid #d4d4d4;
-        margin-left: -40px;
-        margin-right: -40px;
+        margin-left: -28px;
+        margin-right: -28px;
         margin-bottom: clamp(20px, 4vw, 28px);
     }
     body.verification-page .approved-seal {
