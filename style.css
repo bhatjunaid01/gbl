@@ -1083,19 +1083,21 @@ body.verification-page .challan-page {
 
     /* ---- APPROVAL ---- */
     body.verification-page .approval-section {
+        flex-direction: column;
         margin-top: clamp(48px, 10vw, 58px);
         min-height: clamp(130px, 35vw, 180px);
-        padding: clamp(18px, 4vw, 26px) clamp(16px, 4vw, 28px) clamp(24px, 5vw, 34px) clamp(16px, 4vw, 28px);
+        padding: clamp(18px, 4vw, 26px) 8px clamp(24px, 5vw, 34px) 8px;
         border: 1px solid #d4d4d4;
     }
     body.verification-page .approval-text {
-        font-size: clamp(12px, 3vw, 14px);
-        font-weight: 800;
-        letter-spacing: 1.5px;
+        width: auto;
+        font-size: clamp(14px, 3.4vw, 16px);
+        font-weight: 600;
         line-height: clamp(18px, 4.8vw, 24px);
         border-bottom: 1px solid #d4d4d4;
-        margin-left: -28px;
-        margin-right: -28px;
+        letter-spacing: normal;
+        margin-left: -8px;
+        margin-right: -8px;
         margin-bottom: clamp(20px, 4vw, 28px);
     }
     body.verification-page .approved-seal {
